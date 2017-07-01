@@ -131,8 +131,7 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
       
       //convert to cartesian coordinates
       double px = rho * cos(phi);
-      double py = rho * sin(phi);
-      
+      double py = rho * sin(phi);      
       ekf_.x_ << px, py, 0.0, 0.0;
     }
     else if (measurement_pack.sensor_type_ == MeasurementPackage::LASER) {
