@@ -59,12 +59,12 @@ The main program can be built and run by doing the following from the project to
 
 Figure 2 shows the EKF estimation using only RADAR readings. The RMSE values of 0.23, 0.33, 0.60, 0.68 show the EKF accuracy to estimate the moving object position and velocity. 
 
-![alt text][image1]
+![alt text][image2]
 
 
 Figure 3 shows the EKF estimation using only LIDAR readings. As we expected from the LIDAR and RADAR covariance matrix, the accuracy is higher using only the LIDAR sensor. The RMSE values of 0.18, 0.15, 0.60, 0.48 show the EKF accuracy to estimate the moving object position and velocity. 
 
-![alt text][image1]
+![alt text][image3]
 
 Finally, Figure 4 shows the EKF estimation using RADAR and LIDAR readings. The RMSE values of 0.09, 0.08, 0.45, 0.43 show the high accuracy the Sensor Fusion promotes to estimate the moving object position and velocity.
 
