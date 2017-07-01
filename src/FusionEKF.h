@@ -9,6 +9,8 @@
 #include "kalman_filter.h"
 #include "tools.h"
 
+enum FusionType { ONLY_LASER, ONLY_RADAR, ALL};
+
 class FusionEKF {
 public:
   /**
@@ -32,6 +34,10 @@ public:
   KalmanFilter ekf_;
 
 private:
+
+  //set the type of sensor readings, default is ALL (LIDAR + RADAR readings)
+  FusionType sensor_type = ALL;
+  
   // check whether the tracking toolbox was initialized or not (first measurement)
   bool is_initialized_;
 

@@ -2,6 +2,9 @@
 #define KALMAN_FILTER_H_
 #include "Eigen/Dense"
 
+#define PI 3.14159265
+
+
 class KalmanFilter {
 public:
 
@@ -63,6 +66,16 @@ public:
    * @param z The measurement at k+1
    */
   void UpdateEKF(const Eigen::VectorXd &z);
+
+
+  /**
+   * Normalize angle between max and min values
+   * @param value The angle to be normalized
+   * @param max   The max value
+   * @param min   The min value
+   * @returns The normalized angle
+   */
+  double Wrap(double value, double max, double min);    
 
 };
 
